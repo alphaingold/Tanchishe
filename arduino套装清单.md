@@ -3,6 +3,7 @@
 > 来源：`2026-11-18 21-43-43.pdf`（共 18 页，每页一张实物照片）
 > 识别日期：2026-11-18
 > 用途：供其他对话引用、核对与二次整理
+> 图片目录：`arduino_images/`（与本文件放在同一目录下；点击缩略图可查看大图）
 
 ## 使用约定
 
@@ -13,46 +14,48 @@
 
 ---
 
-## 一、总清单
+## 一、总清单（带实物图）
 
-| # | 类别 | 物品 | 型号 / 丝印 | 数量 | 确认 | 备注 |
-|---|------|------|-------------|------|------|------|
-| 1 | 控制板 | Arduino 开发板 | **UNO**（兼容板，R3 排针布局，CH340G） | 1 | ✔ | 板印 `UNO`；CH340G 可读；主控芯片丝印不可读 |
-| 2 | 存储/识别 | RFID 读写模块 | **RFID-RC522** | 1 | ✔ | 蓝色 PCB |
-| 3 | 时钟 | 实时时钟模块 | **DS1302** | 1 | ✔ | 芯片丝印较淡；板印 `MH-Real-Time Clock Modules-2`；配 32.768 kHz 晶振与纽扣电池座 |
-| 4 | 显示 | 字符型 LCD | 不可辨（1602 型 16×2） | 1 | △ | 16 脚；无型号丝印 |
-| 5 | 显示 | 4 位 7 段数码管 | 不可辨 | 1 | ✕ | 带小数点；无型号丝印 |
-| 6 | 显示 | 8×8 LED 点阵 | 不可辨 | 1 | ✕ | 64 颗 LED，红色 PCB；第 2、18 页为同一物品 |
-| 7 | 显示 | RGB LED 模块 | 不可辨 | 1 | ✕ | 引脚 `R/G/B/GND` |
-| 8 | 显示 | 5mm 直插 LED | 不可辨 | 多只 | ✕ | 红、绿、蓝、橙 |
-| 9 | 输入 | 4×4 矩阵键盘 | 不可辨 | 1 | ✕ | 16 键 S1–S16，8 脚 |
-| 10 | 输入 | 双轴摇杆模块 | 不可辨 | 1 | ✕ | 板印 `HW`；5 脚 |
-| 11 | 输入 | 红外遥控器 | 不可辨（面板印 `CAR MP3`） | 1 | ✕ | 21 键；`CAR MP3` 不是型号 |
-| 12 | 输入 | 黑色三脚红外接收头 | 不可辨 | 1 | △ | 黑色透镜外壳、3 脚 |
-| 13 | 输入 | 电位器 | **B10K** | 1 | ✔ | 本体丝印 `B10K` |
-| 14 | 输入/传感 | MH 系列传感器模块 | 不可辨 | 1 | ✕ | 板印 `MH-Sensor-Series`；I²C：`GND/VCC/SDA/SCL`；带蓝色电位器 |
-| 15 | 执行器 | 舵机 | **SG90S**（TowerPro） | 1 | ✔ | 标签可读 |
-| 16 | 执行器 | 步进电机 | **28BYJ-48**，5V DC | 1 | ✔ | 标签另有批次 `201200311` |
-| 17 | 执行器 | 1 路继电器模块 | 继电器 **JQC-3FF-S-Z**，5VDC | 1 | ✔ | 继电器本体丝印 5VDC、10A 250VAC；模块本体无型号 |
-| 18 | 发声 | 蜂鸣器 | 不可辨 | 1 | ✕ | 带 `REMOVE SEAL AFTER WASHING` 保护贴，`+` 极性 |
-| 19 | 传感 | 温湿度传感器模块 | 不可辨（外观为 DHT11 系列） | 1 | △ | 蓝色格栅、4 脚；壳体无丝印 |
-| 20 | 传感 | 水位/水滴传感器模块 | 不可辨 | 1 | ✕ | 红色检测板印 `Water Sensor`；3 脚 `-/S/+` |
-| 21 | 传感 | 声音传感器模块 | 不可辨 | 1 | ✕ | 驻极体麦克风 + VR1 电位器；引脚 `A0/G/+/D0` |
-| 22 | 传感 | 四路循迹传感器 | 不可辨 | 1 | ✕ | 4 路光电管标 A/B/C/D |
-| 23 | 传感 | 金属壳三脚传感元件 | 不可辨 | 1 | △ | TO-5 金属壳、金属网窗口；按外形为 PIR 热释电元件 |
-| 24 | 基础元件 | 肖特基二极管（轴向） | **SS34**（另有 `MIC`） | 1 | ✔ | 轴向封装 |
-| 25 | 基础元件 | 8 位移位寄存器 | **SN74HC595N**（TI，DIP-16） | 1 | ✔ | 批次 `13CN0NK E4` |
-| 26 | 基础元件 | 黑色轴向二极管 | 不可辨 | 1 | ✕ | DO-41 类黑色封装、银色色环 |
-| 27 | 基础元件 | 金属膜电阻 | 阻值不可辨 | 1 袋 | ✕ | 蓝色色环、编带 |
-| 28 | 基础元件 | 免焊面包板 | 不可辨（830 孔） | 1 | ✕ | 63 列×10 孔 + 两条电源轨 |
-| 29 | 连接 | 单排公排针 | 不可辨 | 多段 | ✕ | 可掰断 |
-| 30 | 连接 | 杜邦线/跳线 | 不可辨 | 1 批 | ✕ | 彩色、公母头混装 |
-| 31 | 连接 | 母对母杜邦线 | 不可辨 | 4 根 | ✕ | 用于 RGB 模块 |
-| 32 | 线缆 | USB 数据线 | USB 2.0 A 公转 B 公 | 1 | ✕ | 透明蓝 |
-| 33 | 电源 | 9V 电池扣转 DC 圆头线 | 6F22 电池扣 | 1 | ✕ | DC 圆头规格未标注 |
-| 34 | 配件 | RFID 钥匙扣卡/白卡 | 卡面无型号 | 2 | ✕ | 蓝色扣卡 + 白色卡片，与 RC522 配套 |
-| 35 | 配件 | 透明塑料收纳盒 | 无型号 | 1 | ✕ | 带盖 |
-| 36 | 其他 | 黑色球形海绵 | 无型号 | 1 | ✕ | 用途不明 |
+| # | 图 | 类别 | 物品 | 型号 / 丝印 | 数量 | 确认 | 备注 |
+|---|----|------|------|-------------|------|------|------|
+| 1 | <a href="arduino_images/01_uno.jpg"><img src="arduino_images/01_uno.jpg" width="130"></a> | 控制板 | Arduino 开发板 | **UNO**（兼容板，R3 排针布局，CH340G） | 1 | ✔ | 板印 `UNO`；CH340G 可读；主控芯片丝印不可读 |
+| 2 | <a href="arduino_images/02_rc522.jpg"><img src="arduino_images/02_rc522.jpg" width="130"></a> | 存储/识别 | RFID 读写模块 | **RFID-RC522** | 1 | ✔ | 蓝色 PCB |
+| 3 | <a href="arduino_images/03_ds1302.jpg"><img src="arduino_images/03_ds1302.jpg" width="130"></a> | 时钟 | 实时时钟模块 | **DS1302** | 1 | ✔ | 芯片丝印较淡；板印 `MH-Real-Time Clock Modules-2`；配 32.768 kHz 晶振与纽扣电池座 |
+| 4 | <a href="arduino_images/04_lcd1602.jpg"><img src="arduino_images/04_lcd1602.jpg" width="130"></a> | 显示 | 字符型 LCD | 不可辨（1602 型 16×2） | 1 | △ | 16 脚；无型号丝印 |
+| 5 | <a href="arduino_images/05_7seg.jpg"><img src="arduino_images/05_7seg.jpg" width="130"></a> | 显示 | 4 位 7 段数码管 | 不可辨 | 1 | ✕ | 带小数点；无型号丝印 |
+| 6 | <a href="arduino_images/06_matrix.jpg"><img src="arduino_images/06_matrix.jpg" width="130"></a> | 显示 | 8×8 LED 点阵 | 不可辨 | 1 | ✕ | 64 颗 LED，红色 PCB；第 2、18 页为同一物品 |
+| 7 | <a href="arduino_images/07_rgb.jpg"><img src="arduino_images/07_rgb.jpg" width="130"></a> | 显示 | RGB LED 模块 | 不可辨 | 1 | ✕ | 引脚 `R/G/B/GND` |
+| 8 | <a href="arduino_images/08_leds.jpg"><img src="arduino_images/08_leds.jpg" width="130"></a> | 显示 | 5mm 直插 LED | 不可辨 | 多只 | ✕ | 红、绿、蓝、橙 |
+| 9 | <a href="arduino_images/09_keypad.jpg"><img src="arduino_images/09_keypad.jpg" width="130"></a> | 输入 | 4×4 矩阵键盘 | 不可辨 | 1 | ✕ | 16 键 S1–S16，8 脚 |
+| 10 | <a href="arduino_images/10_joystick.jpg"><img src="arduino_images/10_joystick.jpg" width="130"></a> | 输入 | 双轴摇杆模块 | 不可辨 | 1 | ✕ | 板印 `HW`；5 脚 |
+| 11 | <a href="arduino_images/11_remote.jpg"><img src="arduino_images/11_remote.jpg" width="130"></a> | 输入 | 红外遥控器 | 不可辨（面板印 `CAR MP3`） | 1 | ✕ | 21 键；`CAR MP3` 不是型号 |
+| 12 | <a href="arduino_images/12_irrx.jpg"><img src="arduino_images/12_irrx.jpg" width="130"></a> | 输入 | 黑色三脚红外接收头 | 不可辨 | 1 | △ | 黑色透镜外壳、3 脚 |
+| 13 | <a href="arduino_images/13_pot.jpg"><img src="arduino_images/13_pot.jpg" width="130"></a> | 输入 | 电位器 | **B10K** | 1 | ✔ | 本体丝印 `B10K` |
+| 14 | <a href="arduino_images/14_mh.jpg"><img src="arduino_images/14_mh.jpg" width="130"></a> | 输入/传感 | MH 系列传感器模块 | 不可辨 | 1 | ✕ | 板印 `MH-Sensor-Series`；I²C：`GND/VCC/SDA/SCL`；带蓝色电位器 |
+| 15 | <a href="arduino_images/15_servo.jpg"><img src="arduino_images/15_servo.jpg" width="130"></a> | 执行器 | 舵机 | **SG90S**（TowerPro） | 1 | ✔ | 标签可读 |
+| 16 | <a href="arduino_images/16_stepper.jpg"><img src="arduino_images/16_stepper.jpg" width="130"></a> | 执行器 | 步进电机 | **28BYJ-48**，5V DC | 1 | ✔ | 标签另有批次 `201200311` |
+| 17 | <a href="arduino_images/17_relay.jpg"><img src="arduino_images/17_relay.jpg" width="130"></a> | 执行器 | 1 路继电器模块 | 继电器 **JQC-3FF-S-Z**，5VDC | 1 | ✔ | 继电器本体丝印 5VDC、10A 250VAC；模块本体无型号 |
+| 18 | <a href="arduino_images/18_buzzer.jpg"><img src="arduino_images/18_buzzer.jpg" width="130"></a> | 发声 | 蜂鸣器 | 不可辨 | 1 | ✕ | 带 `REMOVE SEAL AFTER WASHING` 保护贴，`+` 极性 |
+| 19 | <a href="arduino_images/19_dht11.jpg"><img src="arduino_images/19_dht11.jpg" width="130"></a> | 传感 | 温湿度传感器模块 | 不可辨（外观为 DHT11 系列） | 1 | △ | 蓝色格栅、4 脚；壳体无丝印 |
+| 20 | <a href="arduino_images/20_water.jpg"><img src="arduino_images/20_water.jpg" width="130"></a> | 传感 | 水位/水滴传感器模块 | 不可辨 | 1 | ✕ | 红色检测板印 `Water Sensor`；3 脚 `-/S/+` |
+| 21 | <a href="arduino_images/21_sound.jpg"><img src="arduino_images/21_sound.jpg" width="130"></a> | 传感 | 声音传感器模块 | 不可辨 | 1 | ✕ | 驻极体麦克风 + VR1 电位器；引脚 `A0/G/+/D0` |
+| 22 | <a href="arduino_images/22_track.jpg"><img src="arduino_images/22_track.jpg" width="130"></a> | 传感 | 四路循迹传感器 | 不可辨 | 1 | ✕ | 4 路光电管标 A/B/C/D |
+| 23 | <a href="arduino_images/23_pir.jpg"><img src="arduino_images/23_pir.jpg" width="130"></a> | 传感 | 金属壳封装元件 | 不可辨 | 1 | ✕ | TO-5 类金属壳、三脚；具体类型（PIR/光敏等）无法确认 |
+| 24 | <a href="arduino_images/24_sw520d.jpg"><img src="arduino_images/24_sw520d.jpg" width="130"></a> | 基础元件 | 滚珠式振动/倾斜开关 | **SW-520D** | 1 | ✔ | 黑色圆柱、2 脚；另一行丝印 `4520D` |
+| 25 | <a href="arduino_images/25_ic595.jpg"><img src="arduino_images/25_ic595.jpg" width="130"></a> | 基础元件 | 8 位移位寄存器 | **SN74HC595N**（TI，DIP-16） | 1 | ✔ | 批次 `13CN0NK E4` |
+| 26 | <a href="arduino_images/26_axial.jpg"><img src="arduino_images/26_axial.jpg" width="130"></a> | 基础元件 | 黑色轴向二极管 | 不可辨 | 1 | ✕ | DO-41 类黑色封装、银色色环 |
+| 27 | <a href="arduino_images/27_resistors.jpg"><img src="arduino_images/27_resistors.jpg" width="130"></a> | 基础元件 | 金属膜电阻 | 阻值不可辨 | 1 袋 | ✕ | 蓝色色环、编带 |
+| 28 | <a href="arduino_images/28_breadboard.jpg"><img src="arduino_images/28_breadboard.jpg" width="130"></a> | 基础元件 | 免焊面包板 | 不可辨（830 孔） | 1 | ✕ | 63 列×10 孔 + 两条电源轨 |
+| 29 | <a href="arduino_images/29_headers.jpg"><img src="arduino_images/29_headers.jpg" width="130"></a> | 连接 | 单排公排针 | 不可辨 | 多段 | ✕ | 可掰断 |
+| 30 | <a href="arduino_images/30_dupont.jpg"><img src="arduino_images/30_dupont.jpg" width="130"></a> | 连接 | 杜邦线/跳线 | 不可辨 | 1 批 | ✕ | 彩色、公母头混装 |
+| 31 | <a href="arduino_images/31_4pwire.jpg"><img src="arduino_images/31_4pwire.jpg" width="130"></a> | 连接 | 母对母杜邦线 | 不可辨 | 4 根 | ✕ | 用于 RGB 模块 |
+| 32 | <a href="arduino_images/32_usb.jpg"><img src="arduino_images/32_usb.jpg" width="130"></a> | 线缆 | USB 数据线 | USB 2.0 A 公转 B 公 | 1 | ✕ | 透明蓝 |
+| 33 | <a href="arduino_images/33_9v.jpg"><img src="arduino_images/33_9v.jpg" width="130"></a> | 电源 | 9V 电池扣转 DC 圆头线 | 6F22 电池扣 | 1 | ✕ | DC 圆头规格未标注 |
+| 34 | <a href="arduino_images/34_rfidtags.jpg"><img src="arduino_images/34_rfidtags.jpg" width="130"></a><br><a href="arduino_images/34b_rfidcard.jpg"><img src="arduino_images/34b_rfidcard.jpg" width="130"></a> | 配件 | RFID 钥匙扣卡/白卡 | 卡面无型号 | 2 | ✕ | 蓝色扣卡 + 白色卡片，与 RC522 配套 |
+| 35 | <a href="arduino_images/35_box.jpg"><img src="arduino_images/35_box.jpg" width="130"></a> | 配件 | 透明塑料收纳盒 | 无型号 | 1 | ✕ | 带盖 |
+| 36 | <a href="arduino_images/36_sponge.jpg"><img src="arduino_images/36_sponge.jpg" width="130"></a> | 其他 | 黑色球形海绵 | 无型号 | 1 | ✕ | 用途不明 |
+
+> 第 24 项原按第一眼误读为 `SS34`，放大复核后确认丝印为 **SW-520D**（滚珠式振动/倾斜开关），已更正。
 
 ---
 
@@ -78,9 +81,9 @@
 
 | 页码 | 该页物品 |
 |------|----------|
-| 1 | SS34 轴向二极管 |
+| 1 | SW-520D 滚珠振动/倾斜开关 |
 | 2 | 透明收纳盒、单排公排针、袋装金属膜电阻、杜邦线、8×8 LED 点阵（局部） |
-| 3 | SN74HC595N、5mm LED、蜂鸣器、黑色红外接收头、金属壳 PIR 元件、黑色轴向二极管 |
+| 3 | SN74HC595N、5mm LED、蜂鸣器、黑色红外接收头、金属壳封装元件、黑色轴向二极管 |
 | 4 | 与第 3 页同一组元件的另一角度 |
 | 5 | USB 2.0 A-B 数据线 |
 | 6 | 830 孔免焊面包板 |
@@ -104,7 +107,7 @@
 1. 袋装金属膜电阻的阻值：色环模糊，无法读取。
 2. 黑色轴向二极管的型号：无丝印。
 3. 蜂鸣器为有源还是无源：无法从照片确认。
-4. 金属壳 PIR 元件的具体型号：无丝印。
+4. 金属壳元件的具体类型与型号：无丝印；只能确认是 TO-5 类金属壳封装、三脚元件，不能确定是否为 PIR。
 5. `MH-Sensor-Series` 模块的具体传感类型与型号：芯片丝印不可读。
 6. 8×8 点阵背面是否带 MAX7219 等驱动：照片未拍到背面。
 7. 第 2 页右上角局部入镜的黑色块状物：疑似 9V 电池，无法确认，未列入总清单。
@@ -114,6 +117,6 @@
 
 ## 五、可直接引用的结论
 
-- 这是一套以 **Arduino UNO 兼容板** 为核心的入门套件，包含 RFID（RC522）、1602 LCD、8×8 点阵、4 位 7 段数码管、舵机、步进电机、继电器、RTC、矩阵键盘、摇杆、遥控/红外接收及多种传感器模块。
-- 型号可 100% 确认的核心器件：**SS34、SN74HC595N、SG90S、28BYJ-48、JQC-3FF-S-Z、DS1302、RFID-RC522、B10K、UNO（兼容板）**。
+- 这是一套以 **Arduino UNO 兼容板** 为核心的入门套件，包含 RFID（RC522）、1602 LCD、8×8 点阵、4 位 7 段数码管、舵机、步进电机、继电器、RTC、矩阵键盘、摇杆、红外遥控/接收及多种传感器模块。
+- 型号可 100% 确认的核心器件：**SW-520D、SN74HC595N、SG90S、28BYJ-48、JQC-3FF-S-Z、DS1302、RFID-RC522、B10K、UNO（兼容板）**。
 - 其余器件仅能确认类型，型号栏请保持“不可辨”，不要补全。
